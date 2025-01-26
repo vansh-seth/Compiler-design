@@ -1,5 +1,4 @@
-```markdown
-# String Validation Program
+# DFA Implementation
 
 ## Aim
 To implement a Python program that performs various checks on strings based on predefined criteria, providing a menu-driven interface for user interaction.
