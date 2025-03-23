@@ -9,7 +9,6 @@ This program converts an **infix expression** (with operators `+`, `-`, `*`, `/`
 1. **Operator Precedence**: Operators with higher precedence (e.g., `^`, `*`, `/`) are evaluated before operators with lower precedence (e.g., `+`, `-`).
 2. **Associativity**: Operators like `^` are **right-associative**, meaning in expressions like `a^b^c`, the evaluation starts from the right (`b^c` before `a^(b^c)`).
 3. **Postfix Notation**: In postfix, operators come after their operands, eliminating the need for parentheses. This makes it easier for machines to evaluate the expression.
-
 ---
 
 ## Steps
