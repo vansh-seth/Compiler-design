@@ -5,7 +5,6 @@ Infix expressions, such as `a + b * c ^ d ^ e`, are the common way of writing ma
 This program converts an **infix expression** (with operators `+`, `-`, `*`, `/`, and `^` for exponentiation) to **postfix notation**, ensuring:
 1. **Operator precedence**: The program correctly handles operator precedence such that higher precedence operators (like `*`, `/`, `^`) are evaluated before lower precedence ones (like `+`, `-`).
 2. **Associativity**: The program correctly handles the **right-to-left associativity** of the `^` operator, which means `a^b^c` is interpreted as `a^(b^c)`.
-
 ### Key Concepts:
 1. **Operator Precedence**: Operators with higher precedence (e.g., `^`, `*`, `/`) are evaluated before operators with lower precedence (e.g., `+`, `-`).
 2. **Associativity**: Operators like `^` are **right-associative**, meaning in expressions like `a^b^c`, the evaluation starts from the right (`b^c` before `a^(b^c)`).
