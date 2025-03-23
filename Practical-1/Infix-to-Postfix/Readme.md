@@ -1,6 +1,5 @@
 # Infix to Postfix Conversion with Right-to-Left Associativity for Exponentiation
 ## Theory
-
 Infix expressions, such as `a + b * c ^ d ^ e`, are the common way of writing mathematical formulas. However, computers prefer working with **postfix notation** (Reverse Polish Notation, RPN), where the operator follows the operands (e.g., `a b c d e ^ ^ * +`). This eliminates the need for parentheses and operator precedence rules when evaluating expressions.
 
 This program converts an **infix expression** (with operators `+`, `-`, `*`, `/`, and `^` for exponentiation) to **postfix notation**, ensuring:
