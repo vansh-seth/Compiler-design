@@ -1,6 +1,3 @@
-Sure! Here’s a detailed `README.md` file for the **Implementation of LR Parsing** with a handwritten example added.
-
----
 
 # LR Parsing
 
