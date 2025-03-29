@@ -1,7 +1,3 @@
-Certainly! Here's an updated version of the `README.md` with a handwritten example added for better understanding.
-
----
-
 # Predictive Parsing Table Construction
 
 This repository provides an implementation of constructing a **Predictive Parsing Table** for **LL(1)** parsers. The **Predictive Parser** uses **FIRST** and **FOLLOW** sets to create a table that helps in parsing a given input string using a context-free grammar (CFG). This technique is commonly used in the design of top-down parsers for compilers.
