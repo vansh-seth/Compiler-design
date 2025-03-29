@@ -168,16 +168,3 @@ Input Accepted!
    ```bash
    python lr_parsing.py
    ```
-
-## License:
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-### Summary of Changes:
-- **Handwritten Example**: Included a detailed walkthrough of the **LR Parsing** process with a simple grammar.
-- **Action and Goto Tables**: Explains how the action and goto tables are constructed and used in parsing.
-- **Step-by-Step Parsing**: Describes each parsing step, from shifting to accepting, to demonstrate how the parser works in practice.
-
-This `README.md` file should help users understand how to use the **LR Parsing** implementation and also give them insight into the underlying parsing process.
