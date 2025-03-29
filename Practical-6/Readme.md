@@ -1,3 +1,7 @@
+Certainly! Here's an updated version of the `README.md` with a handwritten example added for better understanding.
+
+---
+
 # Predictive Parsing Table Construction
 
 This repository provides an implementation of constructing a **Predictive Parsing Table** for **LL(1)** parsers. The **Predictive Parser** uses **FIRST** and **FOLLOW** sets to create a table that helps in parsing a given input string using a context-free grammar (CFG). This technique is commonly used in the design of top-down parsers for compilers.
@@ -54,6 +58,65 @@ M[A, $] = ε
 ```
 
 This table can then be used to parse strings and check if they conform to the grammar.
+
+---
+
+## Handwritten Example:
+
+Let’s consider a grammar with two non-terminals `S` and `A`:
+
+### Grammar:
+```
+S → Aa | b
+A → c | ε
+```
+
+### Step 1: Compute the **FIRST** Set:
+1. **FIRST(S)**: The productions for `S` are:
+   - `S → Aa`: `FIRST(S)` will contain `FIRST(A)`.
+   - `S → b`: `b` is a terminal, so add `b` to `FIRST(S)`.
+
+   Now, calculate **FIRST(A)**:
+   - `A → c`: `FIRST(A)` contains `c`.
+   - `A → ε`: `ε` is included in `FIRST(A)`.
+
+   So, we have:
+   - **FIRST(S) = {a, b}**
+   - **FIRST(A) = {c, ε}**
+
+### Step 2: Compute the **FOLLOW** Set:
+1. **FOLLOW(S)**: The start symbol `S` has `$` (end of input) in its FOLLOW set.
+   
+2. **FOLLOW(A)**: For production `S → Aa`, the terminal after `A` is `a`, so `a` goes into **FOLLOW(A)**. Since `A → ε` is a valid production, we also add **FOLLOW(S)** to **FOLLOW(A)**. Thus, **FOLLOW(A)** contains `$`.
+
+   So, we have:
+   - **FOLLOW(S) = {$}**
+   - **FOLLOW(A) = {a, $}**
+
+### Step 3: Construct the Predictive Parsing Table:
+
+Now, we can construct the predictive parsing table based on the **FIRST** and **FOLLOW** sets. The table will have rows corresponding to non-terminals and columns corresponding to terminals and `$` (end of input).
+
+| Non-terminal | c    | b    | a    | $    |
+|--------------|------|------|------|------|
+| S            |      | b    | Aa   |      |
+| A            | c    |      |      | ε    |
+
+- **M[S, c]**: Since `c` is in `FIRST(A)`, and `A → c` is a production for `S`, we place `Aa` in the table at `[S, c]`.
+- **M[S, b]**: Since `b` is directly in the grammar production `S → b`, we place `b` in the table at `[S, b]`.
+- **M[A, c]**: Since `A → c` is a valid production, we place `c` in the table at `[A, c]`.
+- **M[A, $]**: Since `A → ε` is valid, and `$` is in **FOLLOW(A)**, we place `ε` in the table at `[A, $]`.
+
+### Final Table:
+```
+Parsing Table:
+M[S, c] = Aa
+M[S, b] = b
+M[A, c] = c
+M[A, $] = ε
+```
+
+---
 
 ## Functions:
 
