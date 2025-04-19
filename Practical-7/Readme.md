@@ -5,7 +5,6 @@ This repository provides an implementation of **LR Parsing**, a bottom-up parsin
 - **Action and Goto Tables**: Constructs action and goto tables based on the grammar.
 - **Grammar Support**: Supports context-free grammars (CFGs) in a specific form (LR(0) or SLR(1)).
 - **Step-by-Step Parsing**: Provides a detailed, step-by-step output of the parsing process for better debugging and understanding.
-
 ## How It Works:
 1. **Shift**: If the current symbol on the input can be shifted to the stack (based on the action table), the parser moves it to the stack and transitions to the next state.
 2. **Reduce**: If the current configuration matches a reduction rule in the action table, the parser reduces a series of symbols in the stack to the corresponding non-terminal.
