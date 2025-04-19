@@ -10,7 +10,6 @@ This repository provides an implementation of **LR Parsing**, a bottom-up parsin
 2. **Reduce**: If the current configuration matches a reduction rule in the action table, the parser reduces a series of symbols in the stack to the corresponding non-terminal.
 3. **Accept**: If the parser reaches the final accepting state, the input is accepted as valid.
 4. **Error**: If no valid action is found for the current state and symbol, the parser reports an error.
-
 ## Grammar Format:
 The grammar must be provided in a dictionary format, where the keys represent non-terminal symbols, and the values represent lists of production rules.
 
