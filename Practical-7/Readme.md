@@ -1,5 +1,4 @@
 # LR Parsing
-
 This repository provides an implementation of **LR Parsing**, a bottom-up parsing technique for context-free grammars. The LR parser uses **action** and **goto tables** to guide the parsing process, making it suitable for deterministic grammars, specifically those that fall under the **LR(0)** or **SLR(1)** categories.
 
 ## Features:
